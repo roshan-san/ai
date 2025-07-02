@@ -13,4 +13,15 @@ export class OpenAIService {
       throw new Error('Failed to generate text');
     }
   }
+  static async sayhello():Promise<string>{
+      try {
+      const response = await openaiobj.responses.create({
+        model:"gpt-3.5-turbo",
+        input:"say hello andwelcom them in a indianway "
+      })
+      return response.output_text
+  } catch (error) {
+      throw new Error("error on greeting user ")
+  }
+}
 }

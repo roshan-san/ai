@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request, response, Response } from 'express';
 import { OpenAIService } from '../services/OpenAiService';
 
 export class OpenAIController {
@@ -14,6 +14,14 @@ export class OpenAIController {
       res.json({ generatedText });
     } catch (error) {
       res.status(500).json({ message: 'Failed to generate text from OpenAI' });
+    }
+  }
+  static async sayhello(req:Request,res:Response):Promise<void> {
+    try {
+      const response = await OpenAIService.sayhello()
+      res.send(response)
+    } catch (error) {
+      throw new Error("error on greeting controller ")
     }
   }
 }

@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api/openai', openAiRoutes);
+app.use('/ai', openAiRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('OpenAI API Integration with Express');
