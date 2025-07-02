@@ -1,5 +1,5 @@
-import { OpenAIController } from 'controllers/openAiConntroller';
 import { Router } from 'express';
+import { OpenAIController } from '../controllers/openAiConntroller';
 
 const router = Router();
 

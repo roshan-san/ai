@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import openAiRoutes from 'routes/openAiRoutes';
+import openAiRoutes from './routes/openAiRoutes';
 
 const app = express();
 

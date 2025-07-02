@@ -1,4 +1,4 @@
-import openaiobj from "config/openAiConfig";
+import openaiobj from "../config/openAiConfig";
 
 export class OpenAIService {
   static async generateText(prompt: string): Promise<string> {

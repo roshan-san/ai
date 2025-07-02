@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { OpenAIService } from 'services/OpenAiService';
+import { OpenAIService } from '../services/OpenAiService';
 
 export class OpenAIController {
   static async generateText(req: Request, res: Response): Promise<void> {
